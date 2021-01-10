@@ -2,3 +2,5 @@
 *.ipynb
 *.log
 *venv
+*debug
+
