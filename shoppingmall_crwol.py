@@ -58,26 +58,25 @@ from urllib.request import urlopen
 # for i in data:
 #     print(i.get_text())
 
-session = requests.session()
-url='https://www.acmicpc.net/signin'
-
-data={
-    'login_user_id': 'ilbul2',
-    'login_password': 'pk@5770114',
-    'next': '/',
-    'stack': '0',
-    'g-recaptcha-response': '03AGdBq27MNqKPwhIdYANQ1B3hGxqXxBSocc9XoLo5fhAvGYOsMCVVb-jew7Ff0rw61IVZqpnArVbX7AUFcnapa83AMOom_b9suxIU5DtewRM0cFsHs5f-J_zqVDU2WU6GmuGtllP_mUzMi7avMjv6LbRBr74YvejXQSK5o5gzw91V3ES1a2hd3hokoQKgYbu44cuZ03bU3MgH3G8Cqu9WOiLzkzmZmhLK5cSuOmuaUiFBCcl6PJD2uBzgBW18CcfmYTnEGhvnbk66FXx2AehFAjCTv8GZdc8gTR2OXH6jUvLyGcoX_JWp7GpohcpVcnkGo72LogPbyVUmwHIK01z9_mLjZ84YJadKPcF15RDOcD00U97O8pp-7YSnC2sweKl2M86ZfLXX8HxnzkajPkdMHoc9fSPtLfsEbbk04VCs41BmdX4_UG97wybFKbUqLenNameNIe5N0_2Q'
-}
-response=session.post(url,data=data)
-#로그인 실행
-response.raise_for_status()
-url='https://www.acmicpc.net/group/workbook/view/8918/29115'
-res=response.get(url)
-print(res)
-soup=BeautifulSoup(res.content,'html.parser')
-print(soup)
-data=soup.select('#table_body > tr:nth-child(1) > td:nth-child(1)')
-for i in data:
-    print(i.get_text())
-
-
+# session = requests.session()
+# url='https://www.acmicpc.net/signin'
+#
+# data={
+#     'login_user_id': 'ilbul2',
+#     'login_password': 'pk@5770114',
+#     'next': '/',
+#     'stack': '0',
+#     'g-recaptcha-response': '03AGdBq27MNqKPwhIdYANQ1B3hGxqXxBSocc9XoLo5fhAvGYOsMCVVb-jew7Ff0rw61IVZqpnArVbX7AUFcnapa83AMOom_b9suxIU5DtewRM0cFsHs5f-J_zqVDU2WU6GmuGtllP_mUzMi7avMjv6LbRBr74YvejXQSK5o5gzw91V3ES1a2hd3hokoQKgYbu44cuZ03bU3MgH3G8Cqu9WOiLzkzmZmhLK5cSuOmuaUiFBCcl6PJD2uBzgBW18CcfmYTnEGhvnbk66FXx2AehFAjCTv8GZdc8gTR2OXH6jUvLyGcoX_JWp7GpohcpVcnkGo72LogPbyVUmwHIK01z9_mLjZ84YJadKPcF15RDOcD00U97O8pp-7YSnC2sweKl2M86ZfLXX8HxnzkajPkdMHoc9fSPtLfsEbbk04VCs41BmdX4_UG97wybFKbUqLenNameNIe5N0_2Q'
+# }
+# response=session.post(url,data=data)
+# #로그인 실행
+# response.raise_for_status()
+# url='https://www.acmicpc.net/group/workbook/view/8918/29115'
+# res=response.get(url)
+# print(res)
+# soup=BeautifulSoup(res.content,'html.parser')
+# print(soup)
+# data=soup.select('#table_body > tr:nth-child(1) > td:nth-child(1)')
+# for i in data:
+#     print(i.get_text())
+#
